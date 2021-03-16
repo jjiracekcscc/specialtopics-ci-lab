@@ -23,10 +23,8 @@ node {
           }
       }
     }
-    post {
-        always {
-            junit 'build/reports/**/*.xml'
-        }
+    finally {
+        junit 'build/reports/**/*.xml'
     }
 
 }
