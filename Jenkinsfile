@@ -16,17 +16,9 @@ node {
       }
       echo "hello"
     }
-        // you should add a test report here
-    stage('Test') {
-      steps {
-          withMaven (maven: 'maven3') {
-              sh "mvn test"
-          }
-      }
-    }
   }
   finally {
-      junit 'build/reports/**/*.xml'
+      junit 'target/**/*.xml'
   }
 
 }
